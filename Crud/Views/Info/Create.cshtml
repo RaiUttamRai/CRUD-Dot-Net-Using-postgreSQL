@@ -1,0 +1,57 @@
+﻿ @model Info
+@*  Create.cshtml *@
+ <form method="post">     
+    <div class="container text-center">
+        <span class="text-black" style="font-size: 30px;">Register here!</span>
+    </div>
+    <br />
+    
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="name" class="form-control" id="floatingInput" placeholder="Name">
+        <label for="floatingInput" asp-for="name">Name</label>
+        <span asp-validation-for="name" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="address" id="floatingInput" placeholder="Address">
+        <label for="floatingInput" asp-for="address">Address</label>
+         <span asp-validation-for="address" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="phoneNo" id="floatingInput" placeholder="Phone no">
+        <label for="floatingInput" asp-for="phoneNo">Phone no</label>
+         <span asp-validation-for="phoneNo" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email"  class="form-control" asp-for="email" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput" asp-for="email">Email address</label>
+         <span asp-validation-for="email" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="parentName" class="form-control" asp-for="parentName" id="floatingInput" placeholder="ParentName">
+        <label for="floatingInput" asp-for="parentName">parentName</label>
+        <span asp-validation-for="parentName" class="text-bg-danger"></span>
+    </div>
+     
+       @* <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="password">
+            <label for="floatingPassword" asp-for="password">password</label>
+             <span asp-validation-for="password" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="retype">
+            <label for="floatingPassword" asp-for="retype">Re-Type-Password</label>
+             <span asp-validation-for="retype" class="text-bg-danger"></span>
+    </div>  *@
+
+    <div class="container text-center pt-1">
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </div> 
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+  

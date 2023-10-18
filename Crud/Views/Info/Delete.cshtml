@@ -1,0 +1,47 @@
+﻿@model Info
+@*  Create.cshtml *@
+<form method="post" asp-action="DeletePOST">
+    
+    <input asp-for="id" hidden/>
+
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="name" disabled class="form-control" id="floatingInput" placeholder="Name">
+        <label for="floatingInput" asp-for="name">Name</label>
+       
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled asp-for="address" id="floatingInput" placeholder="Address">
+        <label for="floatingInput" asp-for="address">Address</label>
+         
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled asp-for="phoneNo" id="floatingInput" placeholder="Phone no">
+        <label for="floatingInput" asp-for="phoneNo">Phone no</label>
+         
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" disabled asp-for="email" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput" asp-for="email">Email address</label>
+        
+    <div class="form-floating mb-3">
+        <input type="parentName" class="form-control" disabled asp-for="parentName" id="floatingInput" placeholder="ParentName">
+        <label for="floatingInput" asp-for="parentName">parentName</label>
+     
+    </div>
+
+    @* <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="password">
+    <label for="floatingPassword" asp-for="password">password</label>
+    <span asp-validation-for="password" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="retype">
+    <label for="floatingPassword" asp-for="retype">Re-Type-Password</label>
+    <span asp-validation-for="retype" class="text-bg-danger"></span>
+    </div>  *@
+
+    <div class="container text-center pt-1">
+        <button type="submit" class="btn btn-primary btn-block">Delete</button>
+    </div>
+        
+</form>
