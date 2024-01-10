@@ -22,44 +22,52 @@ namespace Crud.Controllers
             List<Info> list = _db.infos.ToList();
             return View(list);
         }
-        public IActionResult Create()
+        [HttpGet]
+        public IActionResult Upsert(int? id)
         {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Create(Info info)
-        {
-            _db.infos.Add(info);
-            _db.SaveChanges();
-            TempData["success"] = "Category inserted successfully";
-            return RedirectToAction("Index");
-        }
-        public IActionResult Edit(int? id)
-        {
-            if(id==0 || id==null)
+            if (id == null)
+            {
+                // Insert mode
+                return View();
+            }
+
+            // Update mode
+            Info info = _db.infos.Find(id);
+
+            if (info == null)
             {
                 return NotFound();
             }
-            Info edit = _db.infos.Find(id);
-            if(edit ==null)
-            {
-               return NotFound();
-            }
-            return View(edit);  
-        }
-        [HttpPost]
-        public IActionResult Edit(Info info)
-        {
-            if(ModelState.IsValid)
-            {
-                _db.infos.Update(info);
-                _db.SaveChanges();
-                TempData["success"] = "Category updated successfully";
-                return RedirectToAction("Index");   
-            }
-            return View();
 
+            return View(info);
         }
+
+        [HttpPost]
+        public IActionResult Upsert(Info info)
+        {
+            if (ModelState.IsValid)
+            {
+                if (info.id == 0)
+                {
+                    // Insert
+                    _db.infos.Add(info);
+                    TempData["success"] = "Category inserted successfully!!!!!!!!!!!";
+                }
+                else
+                {
+                    // Update
+                    _db.infos.Update(info);
+                    TempData["success"] = "Category updated successfully!!!!!!!!!!!!!!!";
+                }
+
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(info);
+        }
+
+
 
         [HttpGet]
         public IActionResult Delete(int? id)

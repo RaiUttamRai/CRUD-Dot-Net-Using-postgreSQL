@@ -1,22 +1,17 @@
-﻿@model List<Info>
+﻿@model List<Detail>
 <table class="table table-border table-striped">
     <thead>
         <tr>
             <th>
-                Name
+                DetailID
             </th>
             <th>
-                Address
+                Faculty
             </th>
             <th>
-                Email
+                Floor_no
             </th>
-            <th>
-                Phone No
-            </th>
-            <th>
-                Parent Name
-            </th>
+             
             @*  <th>
             Password
             </th>
@@ -34,11 +29,10 @@
         @foreach (var obj in Model)
         {
             <tr>
-                <td>@obj.name</td>
-                <td>@obj.address</td>
-                <td>@obj.email</td>
-                <td>@obj.phoneNo</td>
-                <td>@obj.parentName</td>
+                <td>@obj.DetailId</td>
+                <td>@obj.faculty</td>
+                <td>@obj.floor</td>
+                 
 
                 @* <td>@info.parentName</td>
             <td>@info.password</td>
@@ -46,10 +40,10 @@
 
                 <td>
                     <div class="btn-group d-inline-flex" role="group">
-                        <a asp-controller="Info" asp-action="Upsert" asp-route-id="@obj.id" class="btn btn-primary">
+                        <a asp-controller="Info" asp-action="Edit" asp-route-id="@obj.DetailId" class="btn btn-primary">
                             <i class="bi bi-pencil-square"></i> Edit
                         </a>
-                        <a asp-controller="Info" asp-action="Delete" asp-route-id="@obj.id" class="btn btn-primary">
+                        <a asp-controller="Info" asp-action="Delete" asp-route-id="@obj.DetailId" class="btn btn-primary">
                             <i class="bi bi-eraser-fill"></i> Delete
                         </a>
                     </div>

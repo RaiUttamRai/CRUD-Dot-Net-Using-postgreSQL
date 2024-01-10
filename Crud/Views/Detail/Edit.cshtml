@@ -1,0 +1,42 @@
+﻿@model Detail
+@*  Create.cshtml *@
+<form method="post">
+    @* <input asp-for="id" hidden /> *@
+    <div class="form-floating mb-3">
+        <input type="text" asp-for="DetailId" class="form-control" id="floatingInput" placeholder="Name">
+        <label for="floatingInput" asp-for="DetailId">Name</label>
+        <span asp-validation-for="DetailId" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="faculty" id="floatingInput" placeholder="Address">
+        <label for="floatingInput" asp-for="faculty">Address</label>
+        <span asp-validation-for="faculty" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" asp-for="floor" id="floatingInput" placeholder="Phone no">
+        <label for="floatingInput" asp-for="floor">Phone no</label>
+        <span asp-validation-for="floor" class="text-bg-danger"></span>
+    </div>
+
+    @* <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="password">
+    <label for="floatingPassword" asp-for="password">password</label>
+    <span asp-validation-for="password" class="text-bg-danger"></span>
+    </div>
+    <div class="form-floating">
+    <input type="text" class="form-control" id="floatingPassword" placeholder="retype">
+    <label for="floatingPassword" asp-for="retype">Re-Type-Password</label>
+    <span asp-validation-for="retype" class="text-bg-danger"></span>
+    </div>  *@
+
+    <div class="container text-center pt-1">
+        <button type="submit" class="btn btn-primary btn-block">Update</button>
+    </div>
+
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Uttam\source\repos\Crud\Crud
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Uttam/source/repos/Crud/Crud/Views/Detail/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Uttam/source/repos/Crud/Crud/Views/Detail/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Uttam/source/repos/Crud/Crud/Views/Detail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Uttam/source/repos/Crud/Crud/Views/Detail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Uttam/source/repos/Crud/Crud/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,20 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Uttam/source/repos/Crud/Crud/Views/Info/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Uttam/source/repos/Crud/Crud/Views/Info/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Uttam/source/repos/Crud/Crud/Views/Info/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Uttam/source/repos/Crud/Crud/Views/Info/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Uttam/source/repos/Crud/Crud/Views/Info/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb1xVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Uttam/source/repos/Crud/Crud/Views/Shared/Error.cshtml]
