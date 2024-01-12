@@ -1,0 +1,11 @@
+C:\Users\Uttam\source\repos\Crud\Crud.Model\bin\Debug\net7.0\Crud.Model.deps.json
+C:\Users\Uttam\source\repos\Crud\Crud.Model\bin\Debug\net7.0\Crud.Model.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Model\bin\Debug\net7.0\Crud.Model.pdb
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.AssemblyInfoInputs.cache
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.AssemblyInfo.cs
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.csproj.CoreCompileInputs.cache
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\refint\Crud.Model.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\Crud.Model.pdb
+C:\Users\Uttam\source\repos\Crud\Crud.Model\obj\Debug\net7.0\ref\Crud.Model.dll

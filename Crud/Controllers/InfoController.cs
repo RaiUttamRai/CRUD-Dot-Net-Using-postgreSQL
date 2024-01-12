@@ -1,9 +1,8 @@
-﻿using Crud.Data;
-using Crud.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
+﻿using Microsoft.AspNetCore.Mvc;
+using Crud.DataAccess.Data;
+using Crud.Model;
+
+
 
 namespace Crud.Controllers
 {

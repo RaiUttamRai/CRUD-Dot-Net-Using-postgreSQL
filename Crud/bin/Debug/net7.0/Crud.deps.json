@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "Crud/1.0.0": {
         "dependencies": {
+          "Crud.DataAccess": "1.0.0",
+          "Crud.Model": "1.0.0",
+          "Crud.Utilities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.12",
           "Npgsql": "7.0.6",
@@ -182,6 +185,28 @@
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
         }
+      },
+      "Crud.DataAccess/1.0.0": {
+        "dependencies": {
+          "Crud.Model": "1.0.0",
+          "Crud.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.12",
+          "Npgsql": "7.0.6",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
+        },
+        "runtime": {
+          "Crud.DataAccess.dll": {}
+        }
+      },
+      "Crud.Model/1.0.0": {
+        "runtime": {
+          "Crud.Model.dll": {}
+        }
+      },
+      "Crud.Utilities/1.0.0": {
+        "runtime": {
+          "Crud.Utilities.dll": {}
+        }
       }
     }
   },
@@ -351,6 +376,21 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "Crud.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Crud.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Crud.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

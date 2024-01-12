@@ -1,7 +1,7 @@
-using Crud.Data;
+using Crud.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Crud 
+namespace Crud
 {
     public class Program
     {

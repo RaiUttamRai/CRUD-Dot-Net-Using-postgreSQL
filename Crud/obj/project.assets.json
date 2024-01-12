@@ -399,6 +399,43 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "Crud.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Crud.Model": "1.0.0",
+          "Crud.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.12",
+          "Npgsql": "7.0.6",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Crud.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Crud.DataAccess.dll": {}
+        }
+      },
+      "Crud.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Crud.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Crud.Model.dll": {}
+        }
+      },
+      "Crud.Utilities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Crud.Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Crud.Utilities.dll": {}
+        }
       }
     }
   },
@@ -1017,10 +1054,28 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Crud.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Crud.DataAccess/Crud.DataAccess.csproj",
+      "msbuildProject": "../Crud.DataAccess/Crud.DataAccess.csproj"
+    },
+    "Crud.Model/1.0.0": {
+      "type": "project",
+      "path": "../Crud.Model/Crud.Model.csproj",
+      "msbuildProject": "../Crud.Model/Crud.Model.csproj"
+    },
+    "Crud.Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Crud.Utilities/Crud.Utilities.csproj",
+      "msbuildProject": "../Crud.Utilities/Crud.Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Crud.DataAccess >= 1.0.0",
+      "Crud.Model >= 1.0.0",
+      "Crud.Utilities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
       "Npgsql >= 7.0.6",
@@ -1053,7 +1108,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.DataAccess\\Crud.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.DataAccess\\Crud.DataAccess.csproj"
+            },
+            "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.Model\\Crud.Model.csproj": {
+              "projectPath": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.Model\\Crud.Model.csproj"
+            },
+            "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.Utilities\\Crud.Utilities.csproj": {
+              "projectPath": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud.Utilities\\Crud.Utilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -40,3 +40,9 @@ C:\Users\Uttam\source\repos\Crud\Crud\obj\Debug\net7.0\refint\Crud.dll
 C:\Users\Uttam\source\repos\Crud\Crud\obj\Debug\net7.0\Crud.pdb
 C:\Users\Uttam\source\repos\Crud\Crud\obj\Debug\net7.0\Crud.genruntimeconfig.cache
 C:\Users\Uttam\source\repos\Crud\Crud\obj\Debug\net7.0\ref\Crud.dll
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.DataAccess.dll
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.Model.dll
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.Utilities.dll
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.DataAccess.pdb
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.Model.pdb
+C:\Users\Uttam\source\repos\Crud\Crud\bin\Debug\net7.0\Crud.Utilities.pdb

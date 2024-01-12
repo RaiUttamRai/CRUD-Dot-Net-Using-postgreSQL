@@ -1,0 +1,11 @@
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\bin\Debug\net7.0\Crud.Utilities.deps.json
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\bin\Debug\net7.0\Crud.Utilities.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\bin\Debug\net7.0\Crud.Utilities.pdb
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.AssemblyInfoInputs.cache
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.AssemblyInfo.cs
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\refint\Crud.Utilities.dll
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\Crud.Utilities.pdb
+C:\Users\Uttam\source\repos\Crud\Crud.Utilities\obj\Debug\net7.0\ref\Crud.Utilities.dll

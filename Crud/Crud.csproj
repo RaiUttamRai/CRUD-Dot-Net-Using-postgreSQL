@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <ProjectReference Include="..\Crud.DataAccess\Crud.DataAccess.csproj" />
+    <ProjectReference Include="..\Crud.Model\Crud.Model.csproj" />
+    <ProjectReference Include="..\Crud.Utilities\Crud.Utilities.csproj" />
   </ItemGroup>
 
 </Project>
