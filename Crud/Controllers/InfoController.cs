@@ -1,24 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Crud.DataAccess.Data;
 using Crud.Model;
-
-
+using Crud.DataAccess.Repository;
 
 namespace Crud.Controllers
 {
     public class InfoController : Controller
     {
-
-
-        private readonly ApplicationDbContext _db;
+        private readonly ICrudRepository _crudRepository;
         private object?[]? id;
-        public InfoController(ApplicationDbContext db)
+        public InfoController(ICrudRepository db)
         {
-            _db = db;
+            _crudRepository = db;
         }
         public IActionResult Index()
         {
-            List<Info> list = _db.infos.ToList();
+            List<Info> list =  _crudRepository.GetAll().ToList();
             return View(list);
         }
         [HttpGet]
@@ -31,7 +28,7 @@ namespace Crud.Controllers
             }
 
             // Update mode
-            Info info = _db.infos.Find(id);
+            Info info = _crudRepository.Get(u=>u.id== id);  
 
             if (info == null)
             {
@@ -49,17 +46,17 @@ namespace Crud.Controllers
                 if (info.id == 0)
                 {
                     // Insert
-                    _db.infos.Add(info);
+                    _crudRepository.Add(info);
                     TempData["success"] = "Category inserted successfully!!!!!!!!!!!";
                 }
                 else
                 {
                     // Update
-                    _db.infos.Update(info);
+                   _crudRepository.Update(info);
                     TempData["success"] = "Category updated successfully!!!!!!!!!!!!!!!";
                 }
 
-                _db.SaveChanges();
+                _crudRepository.Save();
                 return RedirectToAction("Index");
             }
 
@@ -75,7 +72,7 @@ namespace Crud.Controllers
             {
                 return NotFound();
             }
-            Info delete = _db.infos.Find(id);
+            Info delete =  _crudRepository.Get(u=>u.id== id);   
             if (delete == null)
             {
                 return NotFound();
@@ -90,7 +87,7 @@ namespace Crud.Controllers
                 return NotFound();
             }
 
-            Info infoToDelete = _db.infos.Find(id);
+            Info infoToDelete = _crudRepository.Get(u=> u.id== id); 
 
             if (infoToDelete == null)
             {
@@ -99,8 +96,8 @@ namespace Crud.Controllers
 
             try
             {
-                _db.infos.Remove(infoToDelete);
-                _db.SaveChanges();
+                _crudRepository.Remove(infoToDelete);
+                _crudRepository.Save();
                 TempData["success"] = "Category Deleted successfully";
                 return RedirectToAction("Index");
             }
