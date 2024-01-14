@@ -11,6 +11,6 @@ namespace Crud.DataAccess.Repository
     public interface ICrudRepository : IRepository<Info>
     {
         void Update(Info info);
-        void Save();
+       // void Save();
     }
 }

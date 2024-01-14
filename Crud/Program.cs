@@ -1,5 +1,6 @@
 using Crud.DataAccess.Data;
 using Crud.DataAccess.Repository;
+using Crud.DataAccess.UnitOfWork;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crud
@@ -16,7 +17,7 @@ namespace Crud
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-            builder.Services.AddScoped<ICrudRepository, CrudRepository>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
             //builder.Services.AddScoped<DbContext, ApplicationDbContext>();

@@ -2,20 +2,21 @@
 using Crud.DataAccess.Data;
 using Crud.Model;
 using Crud.DataAccess.Repository;
+using Crud.DataAccess.UnitOfWork;
 
 namespace Crud.Controllers
 {
     public class InfoController : Controller
     {
-        private readonly ICrudRepository _crudRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private object?[]? id;
-        public InfoController(ICrudRepository db)
+        public InfoController(IUnitOfWork unitOfWork)
         {
-            _crudRepository = db;
+            _unitOfWork = unitOfWork ;
         }
         public IActionResult Index()
         {
-            List<Info> list =  _crudRepository.GetAll().ToList();
+            List<Info> list =  _unitOfWork.Info.GetAll().ToList();
             return View(list);
         }
         [HttpGet]
@@ -28,7 +29,7 @@ namespace Crud.Controllers
             }
 
             // Update mode
-            Info info = _crudRepository.Get(u=>u.id== id);  
+            Info info = _unitOfWork.Info.Get(u=>u.id== id);  
 
             if (info == null)
             {
@@ -46,17 +47,17 @@ namespace Crud.Controllers
                 if (info.id == 0)
                 {
                     // Insert
-                    _crudRepository.Add(info);
+                    _unitOfWork.Info.Add(info);
                     TempData["success"] = "Category inserted successfully!!!!!!!!!!!";
                 }
                 else
                 {
                     // Update
-                   _crudRepository.Update(info);
+                   _unitOfWork.Info.Update(info);
                     TempData["success"] = "Category updated successfully!!!!!!!!!!!!!!!";
                 }
 
-                _crudRepository.Save();
+                _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
 
@@ -72,7 +73,7 @@ namespace Crud.Controllers
             {
                 return NotFound();
             }
-            Info delete =  _crudRepository.Get(u=>u.id== id);   
+            Info delete = _unitOfWork.Info.Get(u=>u.id== id);   
             if (delete == null)
             {
                 return NotFound();
@@ -87,7 +88,7 @@ namespace Crud.Controllers
                 return NotFound();
             }
 
-            Info infoToDelete = _crudRepository.Get(u=> u.id== id); 
+            Info infoToDelete = _unitOfWork.Info.Get(u=> u.id== id); 
 
             if (infoToDelete == null)
             {
@@ -96,8 +97,8 @@ namespace Crud.Controllers
 
             try
             {
-                _crudRepository.Remove(infoToDelete);
-                _crudRepository.Save();
+                 _unitOfWork.Info.Remove(infoToDelete);
+                _unitOfWork.Save();
                 TempData["success"] = "Category Deleted successfully";
                 return RedirectToAction("Index");
             }
