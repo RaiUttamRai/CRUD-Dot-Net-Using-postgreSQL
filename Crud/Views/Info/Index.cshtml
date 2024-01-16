@@ -1,4 +1,4 @@
-﻿@model List<Info>
+﻿@model List<Crud.Model.InfoViewModel.InfoVM>
 <table class="table table-border table-striped">
     <thead>
         <tr>
@@ -34,11 +34,11 @@
         @foreach (var obj in Model)
         {
             <tr>
-                <td>@obj.name</td>
-                <td>@obj.address</td>
-                <td>@obj.email</td>
-                <td>@obj.phoneNo</td>
-                <td>@obj.parentName</td>
+                <td>@obj.Info.name</td>
+                <td>@obj.Info.address</td>
+                <td>@obj.Info.phoneNo</td>
+                <td>@obj.Info.email</td>
+                <td>@obj.Info.parentName</td>
 
                 @* <td>@info.parentName</td>
             <td>@info.password</td>

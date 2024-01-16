@@ -3,6 +3,7 @@ using Crud.DataAccess.Data;
 using Crud.Model;
 using Crud.DataAccess.Repository;
 using Crud.DataAccess.UnitOfWork;
+using Crud.Model.InfoViewModel;
 
 namespace Crud.Controllers
 {
@@ -16,16 +17,21 @@ namespace Crud.Controllers
         }
         public IActionResult Index()
         {
-            List<Info> list =  _unitOfWork.Info.GetAll().ToList();
-            return View(list);
+            List<InfoVM> infoViewModel = _unitOfWork.Info.GetAll()
+                .Select(info => new InfoVM { Info = info })
+                .ToList();
+
+            return View(infoViewModel); // Pass the infoViewModel to the view
         }
+
         [HttpGet]
         public IActionResult Upsert(int? id)
         {
             if (id == null)
             {
                 // Insert mode
-                return View();
+                InfoVM newInfoViewModel = new InfoVM();
+                return View(newInfoViewModel);
             }
 
             // Update mode
@@ -36,24 +42,25 @@ namespace Crud.Controllers
                 return NotFound();
             }
 
-            return View(info);
+            InfoVM existingInfoVM = new InfoVM();
+            return View(existingInfoVM);
         }
 
         [HttpPost]
-        public IActionResult Upsert(Info info)
+        public IActionResult Upsert(InfoVM  infoViewModel)
         {
             if (ModelState.IsValid)
             {
-                if (info.id == 0)
+                if (infoViewModel.Info.id == 0)
                 {
                     // Insert
-                    _unitOfWork.Info.Add(info);
+                    _unitOfWork.Info.Add(infoViewModel.Info);
                     TempData["success"] = "Category inserted successfully!!!!!!!!!!!";
                 }
                 else
                 {
                     // Update
-                   _unitOfWork.Info.Update(info);
+                   _unitOfWork.Info.Update(infoViewModel.Info);
                     TempData["success"] = "Category updated successfully!!!!!!!!!!!!!!!";
                 }
 
@@ -61,7 +68,7 @@ namespace Crud.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(info);
+            return View(infoViewModel);
         }
 
 

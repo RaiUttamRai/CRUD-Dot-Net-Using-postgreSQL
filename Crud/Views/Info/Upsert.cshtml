@@ -1,5 +1,5 @@
-﻿ @model Info
-@*  Create.cshtml *@
+﻿ @model Crud.Model.InfoViewModel.InfoVM
+ 
  <form method="post">     
     <div class="container text-center">
         <span class="text-black" style="font-size: 30px;">Register here!</span>
@@ -7,29 +7,29 @@
     <br />
     
     <div class="form-floating mb-3">
-        <input type="text" asp-for="name" class="form-control" id="floatingInput" placeholder="Name">
-        <label for="floatingInput" asp-for="name">Name</label>
-        <span asp-validation-for="name" class="text-bg-danger"></span>
+        <input type="text" asp-for="Info.name" class="form-control" id="floatingInput" placeholder="Name">
+        <label for="floatingInput" asp-for="Info.name">Name</label>
+        <span asp-validation-for="Info.name" class="text-bg-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="address" id="floatingInput" placeholder="Address">
-        <label for="floatingInput" asp-for="address">Address</label>
-         <span asp-validation-for="address" class="text-bg-danger"></span>
+        <input type="text" class="form-control" asp-for="Info.address" id="floatingInput" placeholder="Address">
+        <label for="floatingInput" asp-for="Info.address">Address</label>
+         <span asp-validation-for="Info.address" class="text-bg-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" class="form-control" asp-for="phoneNo" id="floatingInput" placeholder="Phone no">
-        <label for="floatingInput" asp-for="phoneNo">Phone no</label>
-         <span asp-validation-for="phoneNo" class="text-bg-danger"></span>
+        <input type="text" class="form-control" asp-for="Info.phoneNo" id="floatingInput" placeholder="Phone no">
+        <label for="floatingInput" asp-for="Info.phoneNo">Phone no</label>
+         <span asp-validation-for="Info.phoneNo" class="text-bg-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="email"  class="form-control" asp-for="email" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput" asp-for="email">Email address</label>
-         <span asp-validation-for="email" class="text-bg-danger"></span>
+        <input type="email"  class="form-control" asp-for="Info.email" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput" asp-for="Info.email">Email address</label>
+         <span asp-validation-for="Info.email" class="text-bg-danger"></span>
     </div>
     <div class="form-floating mb-3">
-        <input type="parentName" class="form-control" asp-for="parentName" id="floatingInput" placeholder="ParentName">
-        <label for="floatingInput" asp-for="parentName">parentName</label>
-        <span asp-validation-for="parentName" class="text-bg-danger"></span>
+        <input type="parentName" class="form-control" asp-for="Info.parentName" id="floatingInput" placeholder="ParentName">
+        <label for="floatingInput" asp-for="Info.parentName">parentName</label>
+        <span asp-validation-for="Info.parentName" class="text-bg-danger"></span>
     </div>
      
        @* <div class="form-floating mb-3">
