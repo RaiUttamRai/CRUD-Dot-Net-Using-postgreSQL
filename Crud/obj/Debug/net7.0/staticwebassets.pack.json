@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud\\wwwroot\\image\\book1.jpg",
+      "PackagePath": "staticwebassets\\image\\book1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud\\wwwroot\\image\\book2.jpg",
+      "PackagePath": "staticwebassets\\image\\book2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud\\wwwroot\\image\\image1.jpg",
+      "PackagePath": "staticwebassets\\image\\image1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud\\wwwroot\\image\\images.jpg",
+      "PackagePath": "staticwebassets\\image\\images.jpg"
+    },
+    {
       "Id": "C:\\Users\\Uttam\\source\\repos\\Crud\\Crud\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
